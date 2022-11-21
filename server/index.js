@@ -23,3 +23,16 @@ async function startApolloServer(typeDefs, resolvers) {
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
 }
 
+const typeDefs = `
+    type Message {
+        id: ID!
+        user: String!
+        msg: String!
+        type: Int!
+    }
+
+    type Query {
+        messages: [Message!]
+    }
+
+`
