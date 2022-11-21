@@ -59,3 +59,4 @@ const resolvers = {
     }
 }
 
+startApolloServer(typeDefs,resolvers)
