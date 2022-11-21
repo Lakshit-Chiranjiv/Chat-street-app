@@ -36,3 +36,20 @@ const typeDefs = `
     }
 
 `
+
+
+const messages = [
+    {
+        id: "id1",
+        user: "Lakshit",
+        msg: "Hi i am lakshit",
+        type: 2
+    },
+    {
+        id: "id2",
+        user: "Sagar",
+        msg: "Ok i am sagar",
+        type: 4
+    }
+]
+
