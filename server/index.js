@@ -69,8 +69,22 @@ const resolvers = {
     },
 
     Mutation: {
-        sendMessage: (parent,{} ) => {
-            
+        sendMessage: (parent,{input}) => {
+            const { user,msg,type } = input
+            const id = "id"+(messages.length+1)
+            messages.push({
+                id,
+                user,
+                msg,
+                type
+            })
+
+            return {
+                id,
+                user,
+                msg,
+                type
+            }
         }
     }
 }
