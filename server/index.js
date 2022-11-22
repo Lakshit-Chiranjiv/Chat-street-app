@@ -36,7 +36,13 @@ const typeDefs = `
     }
 
     type Mutation {
-        sendMessage(user: String!, msg: String!, type: Int!): Message
+        sendMessage(input: MsgInput!): Message
+    }
+
+    input MsgInput {
+        user: String!,
+        msg: String!,
+        type: Int!
     }
 
 `
@@ -60,6 +66,12 @@ const messages = [
 const resolvers = {
     Query: {
         messages: () => messages
+    },
+
+    Mutation: {
+        sendMessage: (parent,{} ) => {
+            
+        }
     }
 }
 
