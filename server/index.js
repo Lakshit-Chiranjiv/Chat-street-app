@@ -35,6 +35,10 @@ const typeDefs = `
         messages: [Message!]
     }
 
+    type Mutation {
+        sendMessage(user: String!, msg: String!, type: Int!): Message
+    }
+
 `
 
 
