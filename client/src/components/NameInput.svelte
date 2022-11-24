@@ -4,14 +4,43 @@
 
 <main>
     <div>
-        <label for="name">Enter name</label>
-        <input type="text">
-    </div>
-    <div>
+        <input type="text" placeholder="Enter name">
         <button>Set Name</button>
     </div>
 </main>
 
 <style>
-    
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    input{
+        height: 30px;
+        border-radius: 5px;
+        border-width: 0;
+        padding: 10px;
+        margin: 5px 0;
+        outline: none;
+        font-size: 14px;
+        flex: 1;
+        font-family: 'Lato',sans-serif;
+    }
+
+    button{
+        height: 50px;
+        border-radius: 5px;
+        border-width: 0;
+        flex: 1;
+        background-color: #9aff7e;
+        font-family: 'Lato',sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+        font-size: 16px;
+        cursor: pointer;
+    }
 </style>
