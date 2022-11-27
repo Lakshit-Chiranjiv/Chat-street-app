@@ -59,8 +59,8 @@
         letter-spacing: 1px;
         font-size: 16px;
         cursor: pointer;
-        height: 55px;
         border-radius: 5px;
         border-width: 0;
+        margin: 5px 0;
     }
 </style>
