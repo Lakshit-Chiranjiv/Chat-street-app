@@ -21,10 +21,6 @@
         <input type="text" placeholder="Enter name" bind:value={nameInput}>
         <button id="setName" on:click={setNameEventDispatch}>Set Name</button>
     </div>
-    <div class="startDiv">
-        <button class="start">Get Started with the Chat</button>
-    </div>
-    <p>Set a name first!</p>
 </main>
 
 <style>
@@ -37,12 +33,6 @@
         align-items: center;
         margin: 20px auto;
         gap: 30px;
-    }
-
-    div.startDiv{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     input{
@@ -72,15 +62,6 @@
     button#setName{
         flex: 1;
         background-color: #7ec5ff;
-    }
-
-    button.start{
-        padding: 10px 40px;
-    }
-
-    p{
-        color: red;
-        text-align: center;
     }
 
 </style>
