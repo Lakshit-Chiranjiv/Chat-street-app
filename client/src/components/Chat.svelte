@@ -1,7 +1,6 @@
 <script>
-  import Message from "./Message.svelte";
-
-    
+    import Message from "./Message.svelte";
+    let msgText = ''
 </script>
 
 <main>
@@ -15,7 +14,7 @@
         </div>
         <!-- msg typing & send -->
         <div class="msg-type">
-            <input type="text" placeholder="Enter your message...">
+            <input type="text" placeholder="Enter your message..." bind:value={msgText}>
             <button>Send 📩</button>
         </div>
     </div>
