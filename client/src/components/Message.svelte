@@ -24,6 +24,7 @@
     }
 
     p.self-msg{
+        background-color: #7fceff;
         align-self: flex-end;
     }
     span.person{
