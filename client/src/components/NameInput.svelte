@@ -7,7 +7,6 @@
         <input type="text" placeholder="Enter name">
         <button id="setName">Set Name</button>
     </div>
-    <h1>Hello User</h1>
     <div class="startDiv">
         <button class="start">Get Started with the Chat</button>
     </div>
