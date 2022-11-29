@@ -1,6 +1,16 @@
 <script>
+    import { createEventDispatcher } from 'svelte'
+
+    const dispatch = createEventDispatcher()
 
     let nameInput = ''
+
+    const setNameEventDispatch = () => {
+        dispatch('setname',{
+            name: nameInput
+        })
+    }
+
 </script>
 
 <main>
