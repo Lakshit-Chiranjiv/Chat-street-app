@@ -16,7 +16,7 @@
 <main>
     <div class="inpDiv">
         <input type="text" placeholder="Enter name" bind:value={nameInput}>
-        <button id="setName">Set Name</button>
+        <button id="setName" on:click={setNameEventDispatch}>Set Name</button>
     </div>
     <div class="startDiv">
         <button class="start">Get Started with the Chat</button>
