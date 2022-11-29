@@ -6,9 +6,12 @@
     let nameInput = ''
 
     const setNameEventDispatch = () => {
-        dispatch('setname',{
-            name: nameInput
-        })
+        if(nameInput){
+            dispatch('setname',{
+                name: nameInput
+            })
+            nameInput = ''
+        }
     }
 
 </script>
