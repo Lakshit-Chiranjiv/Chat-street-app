@@ -1,10 +1,11 @@
 <script>
 
+    let nameInput = ''
 </script>
 
 <main>
     <div class="inpDiv">
-        <input type="text" placeholder="Enter name">
+        <input type="text" placeholder="Enter name" bind:value={nameInput}>
         <button id="setName">Set Name</button>
     </div>
     <div class="startDiv">
