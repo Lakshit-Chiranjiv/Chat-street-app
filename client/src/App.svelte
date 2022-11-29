@@ -4,12 +4,16 @@
   import NameInput from "./components/NameInput.svelte";
   let userName = ''
 
+  const setUserName = (e) => {
+    userName = e.detail.name
+  }
+
 </script>
 
 <main>
   <Header/>
   <h1>Hello {userName ? userName : 'User'}</h1>
-  <NameInput/>
+  <NameInput on:setname={setUserName}/>
   <Chat/>
 </main>
 
