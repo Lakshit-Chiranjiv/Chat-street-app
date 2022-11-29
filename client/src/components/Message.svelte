@@ -1,11 +1,12 @@
 <script>
-
+    export let person,msg;
+    export let isSelf = false;
 </script>
 
 <main>
-    <p class="msg">
-        <span class="person">Jackob</span><br>
-        <span>How are you?</span>
+    <p class={isSelf ? "msg self-msg" : "msg"}>
+        <span class="person">{isSelf ? 'You' : person}</span><br>
+        <span>{msg}</span>
     </p>
 </main>
 
