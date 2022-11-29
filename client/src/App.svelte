@@ -7,8 +7,8 @@ import Header from "./components/Header.svelte";
 </script>
 
 <main>
-  hello
   <Header/>
+  <h1>Hello User</h1>
   <NameInput/>
   <Chat/>
 </main>
