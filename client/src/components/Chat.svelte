@@ -8,10 +8,10 @@
     <div class="chat">
         <!-- messages -->
         <div class="msgs">
-            <Message/>
-            <Message/>
-            <Message/>
-            <Message/>
+            <Message person='Lakshit' msg='Hey there'/>
+            <Message person='Jackob' msg='Hi bro' isSelf/>
+            <Message person='Lakshit' msg='U okay?'/>
+            <Message person='Jackob' msg="Yaa I'm fine" isSelf/>
         </div>
         <!-- msg typing & send -->
         <div class="msg-type">
