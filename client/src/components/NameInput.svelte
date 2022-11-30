@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte'
+    import { navigate } from 'svelte-routing';
 
     const dispatch = createEventDispatcher()
 
@@ -19,13 +20,14 @@
 
     const getStarted = () => {
         if(userName === ''){
-        showError = true
-        setTimeout(()=>{
-            showError = false
-        }, 5000)
+            showError = true
+            setTimeout(()=>{
+                showError = false
+            }, 5000)
         }
         else{
         //route to chat page
+            navigate("/chat");
         }
     }
 
