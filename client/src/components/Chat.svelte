@@ -18,6 +18,10 @@
             <button>Send 📩</button>
         </div>
     </div>
+
+    <div class="back">
+        <button>Back</button>
+    </div>
 </main>
 
 <style>
@@ -61,5 +65,17 @@
         border-radius: 5px;
         border-width: 0;
         margin: 5px 0;
+    }
+
+    div.back{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    div.back > button {
+        background-color: #ff855c;
+        padding: 10px 30px;
     }
 </style>
