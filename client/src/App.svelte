@@ -17,8 +17,18 @@
 <main>
   <Header/>
   <h1>Hello {userName ? userName : 'User'}</h1>
-  <NameInput on:setname={setUserName} userName={userName} showError={showError}/>
-  <Chat/>
+
+  <Router>
+    <Route path='/'>
+      <NameInput on:setname={setUserName} userName={userName} showError={showError}/>
+    </Route>
+    <Route path='/chat'>
+      <Chat/>
+    </Route>
+  </Router>
+
+  
+
 </main>
 
 <style>
