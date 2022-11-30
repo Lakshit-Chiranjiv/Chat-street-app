@@ -38,6 +38,8 @@
 
     div.msgs{
         margin-bottom: 40px;
+        height: 400px;
+        overflow-y: scroll;
     }
 
     div.msg-type{
