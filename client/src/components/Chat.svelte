@@ -1,6 +1,11 @@
 <script>
+    import { navigate } from "svelte-routing";
     import Message from "./Message.svelte";
     let msgText = ''
+
+    const backClick = () => {
+        navigate("/",{ replace: true })
+    }
 </script>
 
 <main>
@@ -20,7 +25,7 @@
     </div>
 
     <div class="back">
-        <button>Back</button>
+        <button on:click={backClick}>Back</button>
     </div>
 </main>
 
