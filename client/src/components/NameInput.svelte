@@ -3,6 +3,9 @@
 
     const dispatch = createEventDispatcher()
 
+    export let userName;
+    export let showError = false;
+
     let nameInput = ''
 
     const setNameEventDispatch = () => {
@@ -14,6 +17,18 @@
         }
     }
 
+    const getStarted = () => {
+        if(userName === ''){
+        showError = true
+        setTimeout(()=>{
+            showError = false
+        }, 5000)
+        }
+        else{
+        //route to chat page
+        }
+    }
+
 </script>
 
 <main>
@@ -21,6 +36,13 @@
         <input type="text" placeholder="Enter name" bind:value={nameInput}>
         <button id="setName" on:click={setNameEventDispatch}>Set Name</button>
     </div>
+
+    <div class="startDiv">
+        <button class="start" on:click={getStarted}>Get Started with the Chat</button>
+    </div>
+    {#if showError}
+      <p>Set a name first!</p>
+    {/if }
 </main>
 
 <style>
@@ -58,7 +80,19 @@
         border-radius: 5px;
         border-width: 0;
     }
-
+    div.startDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button.start{
+        padding: 10px 40px;
+        margin: 20px 0;
+    }
+    p{
+        color: red;
+        text-align: center;
+    }
     button#setName{
         flex: 1;
         background-color: #7ec5ff;
