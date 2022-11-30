@@ -12,6 +12,7 @@
     <div class="chat">
         <!-- messages -->
         <div class="msgs">
+            <!-- should render messages in reverse order as flex direction is column reverse -->
             <Message person='Lakshit' msg='Hey there'/>
             <Message person='Jackob' msg='Hi bro' isSelf/>
             <Message person='Lakshit' msg='U okay?'/>
@@ -40,6 +41,8 @@
         margin-bottom: 40px;
         height: 400px;
         overflow-y: scroll;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     div.msg-type{
