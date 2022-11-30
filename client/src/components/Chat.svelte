@@ -13,10 +13,11 @@
         <!-- messages -->
         <div class="msgs">
             <!-- should render messages in reverse order as flex direction is column reverse -->
-            <Message person='Lakshit' msg='Hey there'/>
-            <Message person='Jackob' msg='Hi bro' isSelf/>
-            <Message person='Lakshit' msg='U okay?'/>
             <Message person='Jackob' msg="Yaa I'm fine" isSelf/>
+            <Message person='Lakshit' msg='U okay?'/>
+            <Message person='Jackob' msg='Hi bro' isSelf/>
+            <Message person='Lakshit' msg='Hey there'/>
+
         </div>
         <!-- msg typing & send -->
         <div class="msg-type">
