@@ -1,11 +1,16 @@
 <script>
+    import { query } from 'svelte-apollo'
+
     import { navigate } from "svelte-routing";
+    import { GET_MSGS } from '../queries.js';
     import Message from "./Message.svelte";
     let msgText = ''
 
     const backClick = () => {
         navigate("/",{ replace: true })
     }
+
+    const msgs = query(GET_MSGS)
 </script>
 
 <main>
