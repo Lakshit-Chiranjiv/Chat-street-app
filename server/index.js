@@ -60,7 +60,43 @@ const messages = [
         user: "Sagar",
         msg: "Ok i am sagar",
         type: 4
-    }
+    },
+    {
+        id: "id3",
+        user: "gg",
+        msg: "Ok i am gg",
+        type: 4
+    },
+    {
+        id: "id4",
+        user: "Sagar",
+        msg: "Ok i am sagar2",
+        type: 4
+    },
+    {
+        id: "id5",
+        user: "gg",
+        msg: "Ok i ar",
+        type: 4
+    },
+    {
+        id: "id6",
+        user: "gg",
+        msg: "Ok i am gg",
+        type: 4
+    },
+    {
+        id: "id7",
+        user: "Sagar",
+        msg: "Ok i am sagar2",
+        type: 4
+    },
+    {
+        id: "id8",
+        user: "gg",
+        msg: "Ok i ar",
+        type: 4
+    },
 ]
 
 const resolvers = {
