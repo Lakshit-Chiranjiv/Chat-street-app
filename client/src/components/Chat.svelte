@@ -1,8 +1,14 @@
 <script>
+// @ts-nocheck
+
     import { query } from 'svelte-apollo'
 
     import { navigate } from "svelte-routing";
+
     import { GET_MSGS } from '../queries.js';
+    import Error from './Error.svelte';
+
+    import Loader from './Loader.svelte';
     import Message from "./Message.svelte";
     let msgText = ''
 
@@ -10,6 +16,7 @@
         navigate("/",{ replace: true })
     }
 
+    export let userName = '';
     const msgs = query(GET_MSGS)
 </script>
 
@@ -17,11 +24,16 @@
     <div class="chat">
         <!-- messages -->
         <div class="msgs">
+            {#if $msgs.loading}
+                <Loader/>
+            {:else if $msgs.error}
+                <Error errMsg={$msgs.error.message}/>
+            {:else}
+                {#each $msgs.data.messages as message (message.id)}
+                    <Message person={message.user} msg={message.msg} isSelf={message.user===userName}/>
+                {/each}
+            {/if}
             <!-- should render messages in reverse order as flex direction is column reverse -->
-            <Message person='Jackob' msg="Yaa I'm fine" isSelf/>
-            <Message person='Lakshit' msg='U okay?'/>
-            <Message person='Jackob' msg='Hi bro' isSelf/>
-            <Message person='Lakshit' msg='Hey there'/>
 
         </div>
         <!-- msg typing & send -->
@@ -48,7 +60,8 @@
         height: 400px;
         overflow-y: scroll;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+        /* flex-direction: column-reverse; */
     }
 
     div.msg-type{
