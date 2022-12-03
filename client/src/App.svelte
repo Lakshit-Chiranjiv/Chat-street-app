@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import Chat from "./components/Chat.svelte";
   import Header from "./components/Header.svelte";
   import NameInput from "./components/NameInput.svelte";
@@ -32,7 +34,10 @@
       <NameInput on:setname={setUserName} userName={userName} showError={showError}/>
     </Route>
     <Route path='/chat'>
-      <Chat/>
+      <Chat userName={userName}/>
+    </Route>
+    <Route path='*'>
+      <p>Not found 404</p>
     </Route>
   </Router>
 
