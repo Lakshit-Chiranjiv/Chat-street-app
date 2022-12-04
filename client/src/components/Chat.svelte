@@ -22,16 +22,18 @@
     const sendMessage = mutation(SEND_MSG);
 
     const handleMessageSend = async() => {
-        try {
-            await sendMessage({ variables:  {
-                input: {
-                    user: userName,
-                    msg: msgText,
-                    type: 3
-                }
-            }});
-        } catch (error) {
-            console.log("Some error occured")
+        if(userName && msgText){
+            try {
+                await sendMessage({ variables:  {
+                    input: {
+                        user: userName,
+                        msg: msgText,
+                        type: 3
+                    }
+                }});
+            } catch (error) {
+                console.log("Some error occured")
+            }
         }
     }
 </script>
