@@ -31,6 +31,7 @@
                         type: 3
                     }
                 }});
+                msgText = ''
             } catch (error) {
                 console.log("Some error occured")
             }
