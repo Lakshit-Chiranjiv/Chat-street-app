@@ -1,11 +1,11 @@
 <script>
 // @ts-nocheck
 
-    import { query } from 'svelte-apollo'
+    import { query,mutation } from 'svelte-apollo'
 
     import { navigate } from "svelte-routing";
 
-    import { GET_MSGS } from '../queries.js';
+    import { GET_MSGS, SEND_MSG } from '../queries.js';
     import Error from './Error.svelte';
 
     import Loader from './Loader.svelte';
@@ -18,6 +18,8 @@
 
     export let userName = '';
     const msgs = query(GET_MSGS)
+
+    const sendMessage = mutation(SEND_MSG);
 </script>
 
 <main>
