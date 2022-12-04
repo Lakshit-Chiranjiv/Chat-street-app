@@ -57,7 +57,7 @@
         <!-- msg typing & send -->
         <div class="msg-type">
             <input type="text" placeholder="Enter your message..." bind:value={msgText}>
-            <button>Send 📩</button>
+            <button on:click={handleMessageSend}>Send 📩</button>
         </div>
     </div>
 
