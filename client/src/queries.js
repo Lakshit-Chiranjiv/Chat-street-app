@@ -11,7 +11,7 @@ export const GET_MSGS = gql`
     }
 `
 
-const SEND_MSG = gql`
+export const SEND_MSG = gql`
     mutation($input: MsgInput!){
         sendMessage(input: $input) {
             id
