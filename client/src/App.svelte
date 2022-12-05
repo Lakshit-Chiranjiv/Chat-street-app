@@ -9,6 +9,7 @@
   import { setClient } from 'svelte-apollo'
 
   import { Router, Route } from "svelte-routing";
+  import NotFound from "./components/NotFound.svelte";
 
   let userName = ''
   let showError = false
@@ -37,7 +38,7 @@
       <Chat userName={userName}/>
     </Route>
     <Route path='*'>
-      <p>Not found 404</p>
+      <NotFound/>
     </Route>
   </Router>
 
