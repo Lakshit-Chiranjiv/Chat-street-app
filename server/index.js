@@ -45,6 +45,10 @@ const typeDefs = `
         type: Int!
     }
 
+    type Subscription {
+        messages: [Message!]
+    }
+
 `
 
 
