@@ -3,7 +3,7 @@
 </script>
 
 <main>
-    <h2>404 Page Not Found</h2>
+    <h2>404 Error - Page Not Found</h2>
     <button>Go to Home</button>
 </main>
 
