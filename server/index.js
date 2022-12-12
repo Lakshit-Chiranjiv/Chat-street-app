@@ -104,12 +104,6 @@ const messages = [
         msg: "Ok i ar",
         type: 4
     },
-    {
-        id: "id9",
-        user: "gg2",
-        msg: "Ok i ar2",
-        type: 4
-    },
 ]
 
 const resolvers = {
