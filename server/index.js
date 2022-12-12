@@ -103,7 +103,7 @@ const messages = [
         user: "gg",
         msg: "Ok i ar",
         type: 4
-    },
+    }
 ]
 
 const resolvers = {
