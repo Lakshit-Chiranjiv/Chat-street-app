@@ -101,7 +101,7 @@ const messages = [
     {
         id: "id8",
         user: "gg",
-        msg: "Ok i ar",
+        msg: "Ok i argg",
         type: 4
     }
 ]
