@@ -18,6 +18,13 @@ async function startApolloServer(typeDefs, resolvers) {
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   });
 
+  const wsServer = new WebSocketServer({
+    server: httpServer,
+    path: '/graphql',
+  });
+
+  const serverCleanup = useServer({ schema }, wsServer);
+
   await server.start();
 
   server.applyMiddleware({ app });
