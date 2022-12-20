@@ -13,17 +13,31 @@ async function startApolloServer(typeDefs, resolvers) {
 
   const schema = makeExecutableSchema({ typeDefs, resolvers });
 
-  const server = new ApolloServer({
-    schema,
-    plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
-  });
-
   const wsServer = new WebSocketServer({
     server: httpServer,
     path: '/graphql',
   });
 
   const serverCleanup = useServer({ schema }, wsServer);
+
+  const server = new ApolloServer({
+    schema,
+    plugins: [
+        // Proper shutdown for the HTTP server.
+        ApolloServerPluginDrainHttpServer({ httpServer }),
+    
+        // Proper shutdown for the WebSocket server.
+        {
+          async serverWillStart() {
+            return {
+              async drainServer() {
+                await serverCleanup.dispose();
+              },
+            };
+          },
+        },
+      ],
+  });
 
   await server.start();
 
