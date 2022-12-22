@@ -125,7 +125,7 @@ const messages = [
         user: "gg",
         msg: "Ok i argg",
         type: 4
-    }
+    },
 ]
 
 const resolvers = {
