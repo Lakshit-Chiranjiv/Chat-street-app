@@ -5,6 +5,9 @@ import { WebSocketServer } from 'ws';
 import { useServer } from 'graphql-ws/lib/use/ws';
 import express from 'express';
 import http from 'http';
+import { PubSub } from 'graphql-subscriptions';
+
+const pubsub = new PubSub();
 
 async function startApolloServer(typeDefs, resolvers) {
   const app = express();
