@@ -157,6 +157,12 @@ const resolvers = {
                 type
             }
         }
+    },
+
+    Subscription: {
+        msgSent: {
+            subscribe: () => pubsub.asyncIterator(['MSG_SENT'])
+        }
     }
 }
 
