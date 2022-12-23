@@ -140,6 +140,9 @@ const resolvers = {
         sendMessage: (parent,{input}) => {
             const { user,msg,type } = input
             const id = "id"+(messages.length+1)
+
+            pubsub.publish('SEND_MSG', { msgSent: input })
+
             messages.push({
                 id,
                 user,
