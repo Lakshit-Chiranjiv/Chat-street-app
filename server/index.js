@@ -160,7 +160,7 @@ const resolvers = {
     },
 
     Subscription: {
-        msgSent: {
+        messages: {
             subscribe: () => pubsub.asyncIterator(['MSG_SENT'])
         }
     }
